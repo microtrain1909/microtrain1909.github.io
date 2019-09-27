@@ -1,0 +1,62 @@
+/* mixins */
+/* clear floats */
+/* variables */
+.text-success {
+  color: #3c763d; }
+
+.text-error {
+  color: #a94442; }
+
+.text-warning {
+  color: #8a6d3b; }
+
+.message, .message-success, .message-error, .message-warning {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  color: #333; }
+
+.message-success {
+  border-color: #3c763d;
+  color: #3c763d; }
+
+.message-error {
+  border-color: #a94442;
+  color: #a94442; }
+
+.message-warning {
+  border-color: #8a6d3b;
+  color: #8a6d3b; }
+
+/* Utility Classes */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/** Rows and Columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.col {
+  float: left;
+  width: 25%;
+  padding: .5rem;
+  /* debug */
+  border: 1px solid #990000;
+  background: #fff; }
+
+/* universal settings */
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding: 0;
+  width: 1170px; }
+
+/*# sourceMappingURL=main.css.map */

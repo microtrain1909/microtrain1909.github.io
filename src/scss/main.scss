@@ -1,0 +1,90 @@
+/* mixins */
+/* clear floats */
+@mixin clearfix() {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+/* variables */
+$success-color: #3c763d;
+$warning-color: #8a6d3b;
+$error-color: #a94442;
+
+.text-success {
+    color: $success-color;
+  }
+  
+  .text-error {
+    color: $error-color;
+  }
+  
+  .text-warning {
+    color: $warning-color;
+  }
+
+  .message {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    color: #333;
+  }
+
+  .message-success {
+      @extend .message;
+      border-color: $success-color;
+      color: $success-color;
+  }
+  
+.message-error {
+    @extend .message;
+    border-color: $error-color;
+    color: $error-color;
+}
+
+.message-warning {
+    @extend .message;
+    border-color: $warning-color;
+    color: $warning-color;
+}
+
+/* Utility Classes */
+
+.clearfix {
+  @include clearfix();
+}
+
+/** Rows and Columns */
+.row {
+  @include clearfix();
+}
+
+.col {
+  float: left;
+  width: 25%;
+  padding: .5rem;
+
+  /* debug */
+  border: 1px solid #990000;
+  background: #fff;
+}
+
+$primary-font-stack: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$primary-color: #333;
+
+/* universal settings */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% $primary-font-stack;
+  color: $primary-color;
+
+  margin: 0 auto;
+  padding: 0;
+  width: 1170px;
+}

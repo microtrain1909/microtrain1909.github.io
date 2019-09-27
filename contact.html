@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>MicroTrain1909 Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Microtrain1909 Hello page">
     <meta name="keywords" content="microtrain1909, welcome, resume, contact">
+    <link rel="stylesheet" type="text/css" href="./dist/css/main.css"> 
   </head>
   <body>
-        <nav>
-            <ul>
+      <main>
+          <header>
+            <span class="logo">My WebSite</span>
+            <a id="toggleMenu">Menu<a>
+                <nav>
+                <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+                </ul>
+            </nav>
+            </header>
+              
         <form action="https://formspree.io/bootcamp@microtrain.net" method="POST">
 
             <div>
@@ -43,5 +49,20 @@
             <input type="hidden" name="_next" value="//microtrain1909.github.io/thanks.html">
 
         </form>
+    </main>
+    <script>
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener(
+              'click',
+              function(){
+                if(nav.style.display=='block'){
+                  nav.style.display='none';
+                }else{
+                  nav.style.display='block';
+                }
+              }
+            );
+    </script>
     </body>
-</html>gmail
+</html>
