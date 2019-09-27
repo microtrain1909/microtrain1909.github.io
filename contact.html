@@ -9,60 +9,106 @@
     <link rel="stylesheet" type="text/css" href="./dist/css/main.css"> 
   </head>
   <body>
-      <main>
-          <header>
-            <span class="logo">My WebSite</span>
-            <a id="toggleMenu">Menu<a>
-                <nav>
-                <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            </header>
+    <main>
+      <header>
+        <span class="logo">My Contact</span>
+        <a id="toggleMenu">Menu<a>
+        <nav>
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
               
+      <div id="cv" class="instaFade">
         <form action="https://formspree.io/bootcamp@microtrain.net" method="POST">
-
-            <div>
-                <input type="hidden" name="_subject" value="New MicroTrain1909 Submission!">
-            </div>
-
-            <div>
-                <label for="name">Name</label>
-                <input id="name" type="text" name="name">
-            </div>
-
-            <div>
-                <label for="email">Email</label>
-                <input id="email" type="text" name="_replyto">  
-            </div>
-
-            <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-
-            <div>
-                <input type="submit" value="Send">
-            </div>
             <input type="hidden" name="_next" value="//microtrain1909.github.io/thanks.html">
-
-        </form>
-    </main>
-    <script>
-            var toggleMenu = document.getElementById('toggleMenu');
-            var nav = document.querySelector('nav');
-            toggleMenu.addEventListener(
-              'click',
-              function(){
-                if(nav.style.display=='block'){
-                  nav.style.display='none';
-                }else{
-                  nav.style.display='block';
-                }
+            <input type="text" name="_gotcha" style="display:none">
+            <div id=thanks class="quickFade">
+              <br>
+              <h1 class="quickFade delayOne">Thank you for visiting me,</h1>
+              <h2 class="quickFade delayTwo">Looking forward to chatting</h2>
+            </div>
+            
+            <table id=table1 height="500px width="900px">
+              <thead>
+                <div id="tablehead">Please Fill out and I will get back to you as soon as possible.</div>
+              </thead>
+              <tbody class="quickFade">
+                <tr class="quickFade delayOne">
+                  <td valign="top">
+                    <label for="first_name">First Name *</label>
+                  </td>
+                  <td valign="top">
+                    <input type="text" name="first_name" maxlength="50" size="30">
+                  </td>
+                </tr>
+        
+                <tr class="quickFade delayTwo">
+                  <td valign="top"">
+                                <label for=" last_name">Last Name *</label>
+                  </td>
+                  <td valign="top">
+                    <input type="text" name="last_name" maxlength="50" size="30">
+                  </td>
+                </tr>
+        
+                <tr class="quickFade delayThree">
+                  <td valign="top">
+                    <label for="email">Email Address *</label>
+                  </td>
+                  <td valign="top">
+                    <input type="text" name="email" maxlength="80" size="30">
+                  </td>
+                </tr>
+        
+                <tr class="quickFade delayFour">
+                  <td valign="top">
+                    <label for="telephone">Telephone Number</label>
+                  </td>
+                  <td valign="top">
+                    <input type="text" name="telephone" maxlength="30" size="30">
+                  </td>
+                </tr>
+        
+                <tr class="quickFade delayFive">
+                  <td valign="top">
+                    <label for="comments">Comments *</label>
+                  </td>
+                  <td valign="top">
+                    <textarea name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                  </td>
+                </tr>
+        
+                <tr class="quickFade delaySix">
+                  <td colspan="2" style="text-align:center">
+                    <button>Submit</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        
+          <div>
+            <input type="hidden" name="_subject" value="New submission!">
+          </div>
+        </div>
+  </main>
+  <script>
+          var toggleMenu = document.getElementById('toggleMenu');
+          var nav = document.querySelector('nav');
+          toggleMenu.addEventListener(
+            'click',
+            function(){
+              if(nav.style.display=='block'){
+                nav.style.display='none';
+              }else{
+                nav.style.display='block';
               }
-            );
-    </script>
-    </body>
+            }
+          );
+  </script>
+  </body>
 </html>
